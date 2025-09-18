@@ -1,16 +1,21 @@
+// Importa as classes necessárias da biblioteca lit
 import { html, css, LitElement } from 'lit';
 
+// Define um novo componente chamado DashboardCounterLabel
 class DashboardCounterLabel extends LitElement {
+
+  // Define os estilos CSS do componente
   static get styles() {
     return css`
       :host {
         position: relative;
         text-align: center;
-        height: calc(18vh - 64px);
-        min-height: 180px;
+        height: calc(18vh - 64px); /* altura proporcional à janela */
+        min-height: 180px;         /* altura mínima fixa */
         display: block;
       }
 
+      /* Diferentes cores para o dígito dependendo da classe aplicada */
       :host(.green) .count-digit {
         color: #55bf3b;
       }
@@ -39,7 +44,7 @@ class DashboardCounterLabel extends LitElement {
       }
 
       .count-digit {
-        font-size: 44px;
+        font-size: 44px; /* tamanho grande para o número */
       }
 
       .subtitle {
@@ -61,12 +66,15 @@ class DashboardCounterLabel extends LitElement {
     `;
   }
 
+  // Renderização do HTML do componente
   render() {
     return html`
+      <!-- Espaço reservado para gráficos (slots) -->
       <div class="chart-wrapper">
         <slot></slot>
       </div>
 
+      <!-- Conteúdo principal do contador -->
       <div class="content">
         <div class="count-wrapper">
           <span id="count" class="count-digit"></span>
@@ -78,9 +86,11 @@ class DashboardCounterLabel extends LitElement {
     `;
   }
 
+  // Nome do custom element
   static get is() {
     return 'dashboard-counter-label';
   }
 }
 
+// Regista o custom element no navegador
 customElements.define(DashboardCounterLabel.is, DashboardCounterLabel);
