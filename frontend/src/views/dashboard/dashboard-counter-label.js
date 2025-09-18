@@ -1,6 +1,37 @@
 import { html, css, LitElement } from 'lit';
 
+/**
+ * `dashboard-counter-label`
+ *
+ * Um Web Component baseado em LitElement para exibir um contador com título,
+ * subtítulo e uma área opcional de gráfico (via slot).
+ *
+ * ## Funcionalidades
+ * - Mostra um número (contador) destacado.
+ * - Permite colorir o número através de classes CSS (`green`, `red`, `blue`, `gray`).
+ * - Exibe título e subtítulo configuráveis.
+ * - Área superior para gráficos customizados via `<slot>`.
+ *
+ * ## Uso
+ * ```html
+ * <dashboard-counter-label class="green">
+ *   <!-- Opcional: inserir gráfico dentro do slot -->
+ *   <my-chart></my-chart>
+ * </dashboard-counter-label>
+ * ```
+ *
+ * ## CSS Custom Properties
+ * - `--lumo-secondary-text-color`: Cor do subtítulo.
+ *
+ * ## Slots
+ * - Padrão: conteúdo (ex: gráfico) exibido na área `.chart-wrapper`.
+ */
 class DashboardCounterLabel extends LitElement {
+  /**
+   * Estilos do componente.
+   * Incluem cores para diferentes estados (verde, vermelho, azul, cinzento),
+   * layout do contador, título e subtítulo.
+   */
   static get styles() {
     return css`
       :host {
@@ -61,6 +92,15 @@ class DashboardCounterLabel extends LitElement {
     `;
   }
 
+  /**
+   * Renderiza o template HTML do componente.
+   * Contém:
+   * - `chart-wrapper`: área para slot de gráficos.
+   * - `count-wrapper`: mostra o valor principal do contador.
+   * - `title` e `subtitle`: textos adicionais.
+   *
+   * @returns {import('lit').TemplateResult} Template do componente
+   */
   render() {
     return html`
       <div class="chart-wrapper">
@@ -78,6 +118,11 @@ class DashboardCounterLabel extends LitElement {
     `;
   }
 
+  /**
+   * Nome da tag do componente customizado.
+   *
+   * @returns {string} 'dashboard-counter-label'
+   */
   static get is() {
     return 'dashboard-counter-label';
   }
