@@ -1,4 +1,4 @@
-#LEI Joao Frade 122713 Alfredo Soudo 122720 Pedro Brito 123854
+# LEI Joao Frade 122713 Alfredo Soudo 122720 Pedro Brito 123854
 
 
 # ⚠️ This starter is not recommended ⚠️
