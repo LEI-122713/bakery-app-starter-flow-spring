@@ -7,6 +7,7 @@ import { html, css, LitElement } from 'lit';
  */
 
 
+
 class DashboardCounterLabel extends LitElement {
   static get styles() {
     return css`
