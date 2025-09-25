@@ -4,7 +4,7 @@ import { html, css, LitElement } from 'lit';
  * DashboardCounterLabel é um componente customizado
  * baseado em LitElement, usado para mostrar um número
  * (contador) com título, subtítulo e cores diferentes.
- */
+    */
 
 
 
