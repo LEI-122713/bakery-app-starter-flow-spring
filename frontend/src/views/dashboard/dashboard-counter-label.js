@@ -1,5 +1,11 @@
 import { html, css, LitElement } from 'lit';
 
+/**
+ * DashboardCounterLabel é um componente customizado
+ * baseado em LitElement, usado para mostrar um número
+ * (contador) com título, subtítulo e cores diferentes.
+ */
+
 class DashboardCounterLabel extends LitElement {
   static get styles() {
     return css`
@@ -84,3 +90,4 @@ class DashboardCounterLabel extends LitElement {
 }
 
 customElements.define(DashboardCounterLabel.is, DashboardCounterLabel);
+
