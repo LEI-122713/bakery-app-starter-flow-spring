@@ -6,6 +6,7 @@ import { html, css, LitElement } from 'lit';
  * (contador) com título, subtítulo e cores diferentes.
  */
 
+
 class DashboardCounterLabel extends LitElement {
   static get styles() {
     return css`
